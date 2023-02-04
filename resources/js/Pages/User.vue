@@ -26,6 +26,8 @@ const props = defineProps({
         <h1 class="text-2xl font-extrabold">{{ data.nama }}</h1>
         <Head :title="data.nama" />
         <CardUser :dataJokis="user" />
+        <p class="pt-5"></p>
+        <hr />
         <Card :dataJokis="kelas" />
     </GuestLayout>
 </template>

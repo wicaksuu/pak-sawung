@@ -318,6 +318,16 @@ const submit = () => {
                         >
                             Pilih Ukuran Kaos
                         </label>
+                        
+                        <p class="italic opacity-60">*format ukuran (cm) :</p>
+                        <p class="text-sm italic opacity-60">Ukuran , Lebar , Panjang , P.Pundak , P.Lengan</p>
+                        <p class="pt-2 text-sm italic opacity-60">S , 47 , 67 , 13 , 53</p>
+                        <p class="text-sm italic opacity-60">M , 49 , 69 , 13 , 54</p>
+                        <p class="text-sm italic opacity-60">L , 51 , 71 , 15 , 55</p>
+                        <p class="text-sm italic opacity-60">XL , 53 , 73 , 16 , 58</p>
+                        <p class="text-sm italic opacity-60">2XL , 55 , 75 , 16 , 59</p>
+                        <p class="pb-4 text-sm italic opacity-60">3XL , 57 , 77 , 16 , 61</p>
+
                         <select
                             id="dess"
                             name="dess"

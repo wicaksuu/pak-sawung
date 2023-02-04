@@ -39,15 +39,12 @@ class DatabaseSeeder extends Seeder
         
         fclose($fh);
 
-        Kaos::create(["nama"=>"Ukuran XS"]);
         Kaos::create(["nama"=>"Ukuran S"]);
         Kaos::create(["nama"=>"Ukuran M"]);
         Kaos::create(["nama"=>"Ukuran L"]);
         Kaos::create(["nama"=>"Ukuran XL"]);
         Kaos::create(["nama"=>"Ukuran 2XL"]);
         Kaos::create(["nama"=>"Ukuran 3XL"]);
-        Kaos::create(["nama"=>"Ukuran 4XL"]);
-        Kaos::create(["nama"=>"Ukuran 55XL"]);
 
         Kelas::create(["nama"=>"Kelas A"]);
         Kelas::create(["nama"=>"Kelas B"]);

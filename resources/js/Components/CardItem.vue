@@ -487,7 +487,9 @@ setInterval(async () => {
                                     <td>No.Hp</td>
                                     <td>:</td>
                                     <td class="text-zinc-500">
-                                        {{ joki.tlp }}
+                                       <a :href="'https://wa.me/62' + joki.tlp" target="_blank" class="underline text-blue-600 hover:font-bold">
+                                            0{{ joki.tlp }}
+                                        </a>
                                     </td>
                                 </tr>
 
@@ -512,10 +514,10 @@ setInterval(async () => {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>NIK</td>
+                                    <td>Email</td>
                                     <td>:</td>
                                     <td class="text-zinc-500">
-                                        {{ joki.nik }}
+                                        <a :href="`mailto:${ joki.email }`" target="_blank" class="underline text-blue-600 hover:font-bold">{{ joki.email }}</a>                                        
                                     </td>
                                 </tr>
                             </table>

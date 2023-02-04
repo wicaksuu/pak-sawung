@@ -155,10 +155,15 @@ class PesertaController extends Controller
         ])->get();  
 
     foreach ($kelas as $item) {
+        $ltlp = strlen($item->tlp);
         $length = strlen($item->nik);
         if ($length>0) {
          $item->nik = substr_replace($item->nik, str_repeat('*', 10), $length - 10, 10);
       } 
+
+        if ($ltlp>0) {
+        $item->tlp = str_replace(" ", "", substr($item->tlp, 1));
+        }
      }
 
     return response()->json([

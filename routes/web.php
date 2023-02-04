@@ -19,18 +19,18 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return view('index',[
-        "harih"=>"03/21/2023 17:00:00",
-        "tempatwaktu"=>"Sabtu, 21 Maret 2023",
-        "tempat"=>"Rumah Makan Suronatan",
-        "alamat_h"=>"Jl. Kenanga Raya No.9, RT.001/RW.006A, Jakasampurna,",
-        "kec_h"=>"Kec. Jiwan Kab. Madiun Jawa Timur",
-        "google_maps"=>"https://maps.google.com/maps?ll=-6.246855,106.971346&z=16&t=m&hl=en&gl=ID&mapclient=embed&daddr=RM.%20Pondok%20Kenanga%20Jl.%20Kenanga%20Raya%20No.9%20RT.001%2FRW.006A%2C%20Jakasampurna%20Bekasi%20Barat%2C%20Bekasi%20City%2C%20West%20Java%2017145@-6.2468549,106.9713456",
+        "harih"=>"04/24/2023 09:00:00",
+        "tempatwaktu"=>"Senin, 24 April 2023",
+        "tempat"=>"Gedung Aula SMPN 1 Magetan",
+        "alamat_h"=>"Jl. Kartini No.4, Dusun Magetan, Magetan,",
+        "kec_h"=>"Kec. Magetan, Kabupaten Magetan, Jawa Timur 63361",
+        "google_maps"=>"https://www.google.com/maps/dir//SMP+Negeri+1+Magetan,+Jl.+Kartini+No.4,+Dusun+Magetan,+Magetan,+Kec.+Magetan,+Kabupaten+Magetan,+Jawa+Timur+63361/@-7.6580791,111.3285989,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2e79922c598ba157:0xb62e3a2d63a442b3!2m2!1d111.3285989!2d-7.6580791",
         "kota"=>"Kabupaten Madiun",
-        "hari"=>"Sabtu",
-        "tanggal"=>"21",
-        "bulan"=>"Maret",
+        "hari"=>"Senin",
+        "tanggal"=>"24",
+        "bulan"=>"April",
         "tahun"=>"2023",
-        "jam"=>"20:00"
+        "jam"=>"09:00"
     ]);
 })->name('base');
 

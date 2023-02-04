@@ -241,7 +241,7 @@
             </p>
           </div>
           <div class="section-map" data-aos="fade-up" data-aos-easing="linear">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1280267408406!2d106.9691569150978!3d-6.246854895478259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d5988a190d9%3A0x22b6a052b0a6a5f3!2sRM.%20Pondok%20Kenanga!5e0!3m2!1sen!2sid!4v1579433583123!5m2!1sen!2sid" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <iframe src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=smp 1 magetasn&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
           </div>
           <div class="space40px"></div>
           <div class="has-text-centered" data-aos="fade-up" data-aos-easing="linear">
@@ -269,17 +269,36 @@
               <p class="h2 subtitle">
                 Merupakan suatu kehormatan bagi kami
                 <br>
-                apabila rekan-rekan berkenan hadir.
+                apabila rekan-rekan berkenan untuk mengisi biodata ringkas ini.
                 <br>
                 <br>
-                Jika bisa hadir kami tunggu konfirmasinya dangan cara mengisi form kehadiran, 
+                Mohon untuk memasukkan data berdasarkan kelas terakhir/kelas tiga pada saat kelulusan
+
                 <br>
-                Mohon mengisi data nama sesuai KTP atau ijasah yang secara otomatis tervalidasi dengan data base nama Alumni
+                <br>
+                dengan mengisi biodata nama sesuai KTP atau ijazah, yang secara otomatis tervalidasi dengan database nama Alumni.
+
                 <br>
                 <br>
-                Apabila ada kesulitan atau permasalahan tidak bisa diinput, mohon rekan-rekan melakukan pemberitahuan dengan menyebutkan Nama dan kelas terakhir saat kelulusan.
-                <br> 
+                Untuk pengisian ukuran kaos dilakukan guna mendukung pelaksanaan reuni nantinya.
+
                 <br>
+                <br>
+                Apabila rekan-rekan tidak bisa hadir, kaos akan tetap dikirimkan.
+
+                <br>
+                <br>
+                Apabila ada kesulitan atau permasalahan input data, mohon rekan-rekan mealakukan pemberitahuan
+                
+                <br>
+                <br>
+                kepada Sdr. Agung Djoko Pratomo (Tommy) melalui link Whatsapp yang ada di bawah, dengan menyebut Nama dan Kelas terakhir saat kelulusan.
+
+                <br>
+                <br>
+                <br>
+                <br>
+
                 </p>
      
               <a href="https://api.whatsapp.com/send?phone=628119361777&text=&source=&data=" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
