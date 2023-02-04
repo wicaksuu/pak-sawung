@@ -1,4 +1,5 @@
 <script setup>
+import {useDark} from "@vueuse/core";
 import { Head, useForm, Link } from "@inertiajs/vue3";
 import GuestLayout from "@/Layouts/GuestLayout.vue";
 import Card from "@/Components/Card.vue";
