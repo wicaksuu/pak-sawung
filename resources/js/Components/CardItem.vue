@@ -143,8 +143,45 @@ const form = useForm({
 });
 
 const editItem = (item) => {
-    form.kaos_id = item.kaos.id;
-    form.kaos_nama = item.kaos.nama;
+    let kaos_id =0;
+    let kaos_nama ="";
+    let provinsi_id =0;
+    let provinsi_nama ="";
+    let kota_id =0;
+    let kota_nama ="";
+    let kecamatan_id =0;
+    let kecamatan_nama ="";
+    let desa_id =0;
+    let desa_nama ="";
+    let kelas_id =0;
+    let kelas_nama ="";
+    
+    if (item.kelas) {
+        kelas_id = item.kelas.id;           
+        kelas_nama = item.kelas.nama; 
+    }
+    if (item.desa) {
+        desa_id = item.desa.id;           
+        desa_nama = item.desa.nama; 
+    }
+    if (item.kecamatan) {
+        kecamatan_id = item.kecamatan.id;           
+        kecamatan_nama = item.kecamatan.nama; 
+    }
+    if (item.kaos) {
+        kaos_id = item.kaos.id;        
+        kaos_nama = item.kaos.nama;        
+    }
+    if (item.provinsi) {
+        provinsi_id = item.provinsi.id;           
+        provinsi_nama = item.provinsi.nama; 
+    }
+    if (item.kota) {
+        kota_id = item.kota.id;           
+        kota_nama = item.kota.nama; 
+    }
+    form.kaos_id = kaos_id;
+    form.kaos_nama = kaos_nama;
     form.email = item.email;
     form.userId = item.id;
     form.id = item.id;
@@ -152,24 +189,31 @@ const editItem = (item) => {
     form.tempat_lahir = item.tempat_lahir;
     form.tlp = item.tlp;
     form.alamat = item.alamat;
-    form.provinsi_id = item.provinsi.id;
-    form.provinsi_nama = item.provinsi.nama;
-    form.kecamatan_id = item.kecamatan.id;
-    form.kecamatan_nama = item.kecamatan.nama;
-    form.kota_id = item.kota.id;
-    form.kota_nama = item.kota.nama;
-    form.desa_id = item.desa.id;
-    form.desa_nama = item.desa.nama;
-    form.kelas_id = item.kelas.id;
-    form.kelas_nama = item.kelas.nama;
+    form.provinsi_id = provinsi_id;
+    form.provinsi_nama = provinsi_nama;
+    form.kecamatan_id = kecamatan_id;
+    form.kecamatan_nama = kecamatan_nama;
+    form.kota_id = kota_id;
+    form.kota_nama = kota_nama;
+    form.desa_id = desa_id;
+    form.desa_nama = desa_nama;
+    form.kelas_id = kelas_id;
+    form.kelas_nama = kelas_nama;
     form.nik = item.nik;
     form.tanggal_lahir = item.tanggal_lahir;
-    cariProvinsi();
-    startKota(form.provinsi_id);
-    startKec(form.kota_id);
-    startDes(form.kecamatan_id);
-    startKaos();
-    startKelas();
+
+    // if (item.kota) {
+    //     startKec(form.kota_id);
+    // }
+    // if (item.provinsi) {
+    //     startKota(form.provinsi_id);
+    // }
+    // if (item.kecamatan) {
+    //     startDes(form.kecamatan_id);
+    // }
+    // cariProvinsi();
+    // startKaos();
+    // startKelas();
     tambahJoki.value = true;
 };
 const closeModal = () => {
@@ -193,16 +237,17 @@ function truncateString(string, limit) {
     }}
     return string;
 }
+
 const updateDataJoki = async () => {
     try {
         if (form.nama != "") {
-            const response = await axios.post(route("update"), form);
-            closeModal();
-            addToast(
-                response.data.type,
-                response.data.message,
-                response.duration
-            );
+            // const response = await axios.post(route("update"), form);
+            // closeModal();
+            // addToast(
+            //     response.data.type,
+            //     response.data.message,
+            //     response.duration
+            // );
             const resp = await axios.get(route("update-dashboard"));
             dump.users = resp.data.kelas;
             return resp.data.user;
@@ -234,6 +279,7 @@ setInterval(async () => {
                 <select
                     id="kelas_id"
                     required
+                    disabled
                     v-model="form.kelas_id"
                     class="mt-1 block w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm"
                 >
@@ -245,7 +291,6 @@ setInterval(async () => {
                         {{ kelas.nama }}
                     </option>
                 </select>
-                <InputError :message="form.errors.kelas_id" class="mt-2" />
             </div>
             <div class="mt-4">
                 <InputLabel for="email" value="Email" />
@@ -254,22 +299,10 @@ setInterval(async () => {
                     type="email"
                     class="mt-1 block w-full"
                     v-model="form.email"
+                    disabled
                     required
                     autocomplete="email"
                 />
-                <InputError :message="form.errors.email" class="mt-2" />
-            </div>
-            <div class="mt-4">
-                <InputLabel for="nik" value="NIK" />
-                <TextInput
-                    id="nik"
-                    type="text"
-                    class="mt-1 block w-full"
-                    v-model="form.nik"
-                    required
-                    autocomplete="nik"
-                />
-                <InputError :message="form.errors.nik" class="mt-2" />
             </div>
             <div class="mt-4">
                 <InputLabel for="nama" value="Nama Lengkap" />
@@ -278,10 +311,10 @@ setInterval(async () => {
                     type="text"
                     class="mt-1 block w-full"
                     v-model="form.nama"
+                    disabled
                     required
                     autocomplete="nama"
                 />
-                <InputError :message="form.errors.nama" class="mt-2" />
             </div>
             <div class="mt-4">
                 <InputLabel for="tempat_lahir" value="Tempat Lahir" />
@@ -290,10 +323,10 @@ setInterval(async () => {
                     type="text"
                     class="mt-1 block w-full"
                     v-model="form.tempat_lahir"
+                    disabled
                     required
                     autocomplete="tempat_lahir"
                 />
-                <InputError :message="form.errors.tempat_lahir" class="mt-2" />
             </div>
             <DatePicker v-model="form.tanggal_lahir" label="Tanggal Lahir" />
 
@@ -302,6 +335,7 @@ setInterval(async () => {
                 type="hidden"
                 v-model="form.id"
                 required
+                    disabled
                 autocomplete="id"
             />
             <div class="mt-4">
@@ -311,10 +345,10 @@ setInterval(async () => {
                     type="text"
                     class="mt-1 block w-full"
                     v-model="form.tlp"
+                    disabled
                     required
                     autocomplete="tlp"
                 />
-                <InputError :message="form.errors.tlp" class="mt-2" />
             </div>
 
             <div class="mt-4">
@@ -324,10 +358,10 @@ setInterval(async () => {
                     type="text"
                     class="mt-1 block w-full"
                     v-model="form.alamat"
+                    disabled
                     required
                     autocomplete="alamat"
                 />
-                <InputError :message="form.errors.alamat" class="mt-2" />
             </div>
             <div class="mt-4">
                 <InputLabel for="provinsi_id" value="Provinsi" />
@@ -335,6 +369,7 @@ setInterval(async () => {
                     id="provinsi_id"
                     required
                     v-model="form.provinsi_id"
+                    disabled
                     @change="cariKota"
                     class="mt-1 block w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm"
                 >
@@ -346,14 +381,13 @@ setInterval(async () => {
                         {{ provinsi.nama }}
                     </option>
                 </select>
-
-                <InputError :message="form.errors.provinsi_id" class="mt-2" />
             </div>
             <div class="mt-4">
                 <InputLabel for="kota_id" value="Kota" />
                 <select
                     id="kota_id"
                     required
+                    disabled
                     @change="cariKec"
                     v-model="form.kota_id"
                     class="mt-1 block w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm"
@@ -366,13 +400,13 @@ setInterval(async () => {
                         {{ kota.nama }}
                     </option>
                 </select>
-                <InputError :message="form.errors.kota_id" class="mt-2" />
             </div>
             <div class="mt-4">
                 <InputLabel for="kecamatan_id" value="Kecamatan" />
                 <select
                     id="kecamatan_id"
                     required
+                    disabled
                     @change="cariDes"
                     v-model="form.kecamatan_id"
                     class="mt-1 block w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm"
@@ -385,13 +419,13 @@ setInterval(async () => {
                         {{ kecamatan.nama }}
                     </option>
                 </select>
-                <InputError :message="form.errors.kecamatan_id" class="mt-2" />
             </div>
             <div class="mt-4">
                 <InputLabel for="desa_id" value="Desa" />
                 <select
                     id="desa_id"
                     required
+                    disabled
                     v-model="form.desa_id"
                     class="mt-1 block w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm"
                 >
@@ -403,13 +437,13 @@ setInterval(async () => {
                         {{ desa.nama }}
                     </option>
                 </select>
-                <InputError :message="form.errors.desa_id" class="mt-2" />
             </div>
             <div class="mt-4">
                 <InputLabel for="kaos_id" value="Kaos" />
                 <select
                     id="kaos_id"
                     required
+                    disabled
                     v-model="form.kaos_id"
                     class="mt-1 block w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm"
                 >
@@ -421,19 +455,6 @@ setInterval(async () => {
                         {{ kaos.nama }}
                     </option>
                 </select>
-                <InputError :message="form.errors.kaos_id" class="mt-2" />
-            </div>
-
-            <div class="mt-6 flex justify-end">
-                <Button @click="closeModal"> Cancel </Button>
-                <SuccessButton
-                    class="ml-1"
-                    :class="{ 'opacity-25': form.processing }"
-                    :disabled="form.processing"
-                    @click="updateDataJoki"
-                >
-                    Save
-                </SuccessButton>
             </div>
         </div>
     </Modal>
@@ -451,14 +472,14 @@ setInterval(async () => {
                             <p class="pl-2 text-2xl font-bold text-zinc-700">
                                 {{ truncateString(joki.nama, 18) }}
                             </p>
-                            <!-- <div class="flex text-center items-centered">
+                            <div class="flex text-center items-centered">
                                 <button
                                     class="text-indigo-600 hover:text-indigo-900 p-1"
                                     @click="editItem(joki)"
                                 >
                                     <Edit />
                                 </button>
-                            </div> -->
+                            </div>
                         </div>
                         <div class="pl-2 mt-4">
                             <table class="table-auto">
@@ -485,7 +506,7 @@ setInterval(async () => {
                                                     joki.kota.nama +
                                                     " " +
                                                     joki.provinsi.nama,
-                                                30
+                                                27
                                             )
                                         }}
                                     </td>

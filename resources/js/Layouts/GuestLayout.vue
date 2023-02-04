@@ -15,7 +15,7 @@ import { Link } from "@inertiajs/vue3";
                 >
                     <div class="flex flex-shrink-0 items-center">
                         <img
-                            class="block h-11 w-auto lg:hidden"
+                            class="block h-11 w-auto "
                             src="/86.png"
                             alt="Your Company"
                         />
@@ -37,7 +37,9 @@ import { Link } from "@inertiajs/vue3";
         </div>
     </nav>
 
-    <div class="pt-5 ml-5 mr-5">
-        <slot />
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
+        <div class="p-5">
+            <slot />
+        </div>
     </div>
 </template>

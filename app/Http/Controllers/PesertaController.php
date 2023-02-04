@@ -154,6 +154,12 @@ class PesertaController extends Controller
         'kaos'
         ])->get();  
 
+    foreach ($kelas as $item) {
+        $length = strlen($item->nik);
+        if ($length>0) {
+         $item->nik = substr_replace($item->nik, str_repeat('*', 10), $length - 10, 10);
+      } 
+     }
 
     return response()->json([
         'user' => $peserta,

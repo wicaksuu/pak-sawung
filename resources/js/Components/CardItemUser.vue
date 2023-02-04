@@ -224,10 +224,16 @@ const editItem = (item) => {
     form.kelas_nama = kelas_nama;
     form.nik = item.nik;
     form.tanggal_lahir = item.tanggal_lahir;
+    if (item.kota) {
+        startKec(form.kota_id);
+    }
+    if (item.provinsi) {
+        startKota(form.provinsi_id);
+    }
+    if (item.kecamatan) {
+        startDes(form.kecamatan_id);
+    }
     cariProvinsi();
-    startKota(form.provinsi_id);
-    startKec(form.kota_id);
-    startDes(form.kecamatan_id);
     startKaos();
     startKelas();
     tambahJoki.value = true;
@@ -542,7 +548,7 @@ updateDataJoki();
                                                     dump.user.kota.nama +
                                                     " " +
                                                     dump.user.provinsi.nama,
-                                                30
+                                                27
                                             )
                                         }}
                                     </td>
