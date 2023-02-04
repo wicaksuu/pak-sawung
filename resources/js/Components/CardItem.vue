@@ -186,9 +186,11 @@ function addToast(Type, Message, Duration) {
 }
 
 function truncateString(string, limit) {
+
+    if (string != null) {
     if (string.length > limit) {
         return string.substring(0, limit) + "...";
-    }
+    }}
     return string;
 }
 const updateDataJoki = async () => {
@@ -471,7 +473,7 @@ setInterval(async () => {
                                 <tr>
                                     <td>Alamat</td>
                                     <td>:</td>
-                                    <td class="text-zinc-500">
+                                    <td class="text-zinc-500" v-if="joki.desa">
                                         {{
                                             truncateString(
                                                 joki.alamat +
@@ -502,7 +504,7 @@ setInterval(async () => {
                             <div class="flex items-center justify-between mt-2">
                                 <span
                                     class="px-2 py-1 blue-white text-xs font-semibold rounded-full"
-                                >
+                                v-if="joki.kaos" >
                                     @{{ truncateString(joki.kaos.nama, 10) }}
                                 </span>
                                 <div

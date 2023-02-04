@@ -78,7 +78,7 @@ const form = useForm({
     nik: "",
     tempatLahir: "",
     tanggalLahir: "",
-    kelas: "",
+    kelas: props.data.kelas_id,
     kaos: "",
     tlp: "",
 });
@@ -88,6 +88,7 @@ const submit = () => {
         onSuccess: () => form.reset(),
     });
 };
+
 </script>
 
 <template>
@@ -135,6 +136,7 @@ const submit = () => {
                             <option
                                 v-for="kelas in props.kelas"
                                 :value="kelas.id"
+                                :selected="kelas.id === props.data.kelas_id"
                             >
                                 {{ kelas.nama }}
                             </option>

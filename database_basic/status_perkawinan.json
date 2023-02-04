@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "nama":"Belum menikah"
+    },
+    {
+        "id":2,
+        "nama":"Menikah"
+    },
+    {
+        "id":3,
+        "nama":"Cerai hidup"
+    },
+    {
+        "id":4,
+        "nama":"Cerai mati"
+    },
+    {
+        "id":5,
+        "nama":"Janda"
+    },
+    {
+        "id":6,
+        "nama":"Duda"
+    }
+]

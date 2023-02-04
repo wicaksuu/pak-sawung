@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "nama": "Kepala Keluarga"
+    },
+    {
+        "id": 2,
+        "nama": "Istri"
+    },
+    {
+        "id": 3,
+        "nama": "Anak"
+    },
+    {
+        "id": 4,
+        "nama": "Saudara"
+    },
+    {
+        "id": 5,
+        "nama": "Orang Tua"
+    },
+    {
+        "id": 6,
+        "nama": "Metua"
+    },
+    {
+        "id": 7,
+        "nama": "Keluarga Lain"
+    },
+    {
+        "id": 8,
+        "nama": "Cucu"
+    },
+    {
+        "id": 9,
+        "nama": "Menantu"
+    },
+    {
+        "id": 10,
+        "nama": "Suami"
+    },
+    {
+        "id": 11,
+        "nama": "Pembantu"
+    },
+    {
+        "id": 12,
+        "nama": "Lain-Lain"
+    }
+]

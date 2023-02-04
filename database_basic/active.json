@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "nama":"Waiting verification",
+        "keterangan":"Menunggu proses verifikasi dan aktifasi user"
+    },
+    {
+        "id":2,
+        "nama":"Demo",
+        "keterangan":"Key anda yang anda gunakan merupakan key demo untuk sesi developer"
+    },
+    {
+        "id":3,
+        "nama":"Active",
+        "keterangan":"Key anda telah aktif dan bisa digunakan"
+    },
+    {
+        "id":4,
+        "nama":"Banned SP1",
+        "keterangan":"kami mendeteksi key anda menyalahi aturan yang kami buat, mohon menghubingi kominfo kabupaten madiun untuk membuka key anda"
+    },
+    {
+        "id":5,
+        "nama":"Banned",
+        "keterangan":"Kami telah memblokir key anda, anda tidak lagi bisa mengakses API kami"
+    },
+    {
+        "id":6,
+        "nama":"Limit",
+        "keterangan":"Key anda telah mencapai batas request yang telah disepakati"
+    }
+]

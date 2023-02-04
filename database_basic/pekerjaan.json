@@ -1,0 +1,633 @@
+[
+    {
+        "id":1,
+        "nama":"PELAJAR/MAHASISWA"
+    },
+    {
+        "id":2,
+        "nama":"KARYAWAN SWASTA"
+    },
+    {
+        "id":3,
+        "nama":"MENGURUS RUMAH TANGGA"
+    },{
+        "id": 4,
+        "nama": "Mengurus Rumah Tangga"
+    },
+    {
+        "id": 5,
+        "nama": "Karyawan Swasta"
+    },
+    {
+        "id": 6,
+        "nama": "Belum / Tidak Bekerja"
+    },
+    {
+        "id": 7,
+        "nama": "WIRASWASTA"
+    },
+    {
+        "id": 8,
+        "nama": "TIDAK/BELUM BEKERJA"
+    },
+    {
+        "id": 9,
+        "nama": "Nelayan / Perikanan"
+    },
+    {
+        "id": 10,
+        "nama": "Pelajar / Mahasiswa"
+    },
+    {
+        "id": 11,
+        "nama": "Buruh Harian Lepas"
+    },
+    {
+        "id": 12,
+        "nama": "Pensiunan"
+    },
+    {
+        "id": 13,
+        "nama": "Petani / Pekebun"
+    },
+    {
+        "id": 14,
+        "nama": "Wiraswasta"
+    },
+    {
+        "id": 15,
+        "nama": "Konstruksi"
+    },
+    {
+        "id": 16,
+        "nama": "Buruh Tani / Perkebunan"
+    },
+    {
+        "id": 17,
+        "nama": "PEKERJA LEPAS"
+    },
+    {
+        "id": 18,
+        "nama": "PNS/TNI/POLRI"
+    },
+    {
+        "id": 19,
+        "nama": "PEGAWAI SWASTA"
+    },
+    {
+        "id": 20,
+        "nama": "PETANI"
+    },
+    {
+        "id": 21,
+        "nama": "Pegawai Negeri Sipil"
+    },
+    {
+        "id": 22,
+        "nama": "Bidan"
+    },
+    {
+        "id": 23,
+        "nama": "Karyawan Honorer"
+    },
+    {
+        "id": 24,
+        "nama": "Pedagang"
+    },
+    {
+        "id": 25,
+        "nama": "Karyawan BUMN"
+    },
+    {
+        "id": 26,
+        "nama": "Perangkat Desa"
+    },
+    {
+        "id": 27,
+        "nama": "LAINNYA"
+    },
+    {
+        "id": 28,
+        "nama": "Perawat"
+    },
+    {
+        "id": 29,
+        "nama": "PEDAGANG"
+    },
+    {
+        "id": 30,
+        "nama": "Perdagangan"
+    },
+    {
+        "id": 31,
+        "nama": "Tukang Kayu"
+    },
+    {
+        "id": 32,
+        "nama": "Pembantu Rumah Tangga"
+    },
+    {
+        "id": 33,
+        "nama": "Imam Masjid"
+    },
+    {
+        "id": 34,
+        "nama": "Tukang Batu"
+    },
+    {
+        "id": 35,
+        "nama": "Tentara Nasional Indonesia"
+    },
+    {
+        "id": 36,
+        "nama": "Guru"
+    },
+    {
+        "id": 37,
+        "nama": "Sopir"
+    },
+    {
+        "id": 38,
+        "nama": "Pelaut"
+    },
+    {
+        "id": 39,
+        "nama": "Tabib"
+    },
+    {
+        "id": 40,
+        "nama": "Mekanik"
+    },
+    {
+        "id": 41,
+        "nama": "Tukang Jahit"
+    },
+    {
+        "id": 42,
+        "nama": "Wartawan"
+    },
+    {
+        "id": 43,
+        "nama": "Penata Rias"
+    },
+    {
+        "id": 44,
+        "nama": "Industri"
+    },
+    {
+        "id": 45,
+        "nama": "Seniman"
+    },
+    {
+        "id": 46,
+        "nama": "Karyawan BUMD"
+    },
+    {
+        "id": 47,
+        "nama": "Kepala Desa"
+    },
+    {
+        "id": 48,
+        "nama": "PENSIUNAN"
+    },
+    {
+        "id": 49,
+        "nama": "Tukang Las / Pandai Besi"
+    },
+    {
+        "id": 50,
+        "nama": "Transportasi"
+    },
+    {
+        "id": 51,
+        "nama": "Perancang Busana"
+    },
+    {
+        "id": 52,
+        "nama": "Kepolisian RI"
+    },
+    {
+        "id": 53,
+        "nama": "Paraji"
+    },
+    {
+        "id": 54,
+        "nama": "Juru Masak"
+    },
+    {
+        "id": 55,
+        "nama": "Peternak"
+    },
+    {
+        "id": 56,
+        "nama": "Tukang Listrik"
+    },
+    {
+        "id": 57,
+        "nama": "Peneliti"
+    },
+    {
+        "id": 58,
+        "nama": "Penata Rambut"
+    },
+    {
+        "id": 59,
+        "nama": "Ustadz / Mubaligh"
+    },
+    {
+        "id": 60,
+        "nama": "KARYAWAN SWASTA"
+    },
+    {
+        "id": 61,
+        "nama": "MENGURUS RUMAH TANGGA"
+    },
+    {
+        "id": 62,
+        "nama": "PETANI/PEKEBUN"
+    },
+    {
+        "id": 63,
+        "nama": "PELAJAR/MAHASISWA"
+    },
+    {
+        "id": 64,
+        "nama": "BURUH HARIAN LEPAS"
+    },
+    {
+        "id": 65,
+        "nama": "PERANGKAT DESA"
+    },
+    {
+        "id": 66,
+        "nama": "GURU"
+    },
+    {
+        "id": 67,
+        "nama": "BURUH TANI/PERKEBUNAN"
+    },
+    {
+        "id": 68,
+        "nama": "TENTARA NASIONAL INDONESIA (TNI)"
+    },
+    {
+        "id": 69,
+        "nama": "PEGAWAI NEGERI SIPIL (PNS)"
+    },
+    {
+        "id": 70,
+        "nama": "KEPOLISIAN RI (POLRI)"
+    },
+    {
+        "id": 71,
+        "nama": "SOPIR"
+    },
+    {
+        "id": 72,
+        "nama": "KARYAWAN BUMN"
+    },
+    {
+        "id": 73,
+        "nama": "Buruh Nelayan / Perikanan"
+    },
+    {
+        "id": 74,
+        "nama": "KEPALA DESA"
+    },
+    {
+        "id": 75,
+        "nama": "PERAWAT"
+    },
+    {
+        "id": 76,
+        "nama": "TUKANG KAYU"
+    },
+    {
+        "id": 77,
+        "nama": "BIDAN"
+    },
+    {
+        "id": 78,
+        "nama": "Paranormal"
+    },
+    {
+        "id": 79,
+        "nama": "KARYAWAN HONORER"
+    },
+    {
+        "id": 80,
+        "nama": "Tukang Gigi"
+    },
+    {
+        "id": 81,
+        "nama": "TUKANG LAS/PANDAI BESI"
+    },
+    {
+        "id": 82,
+        "nama": "Apoteker"
+    },
+    {
+        "id": 83,
+        "nama": "Buruh Peternakan"
+    },
+    {
+        "id": 84,
+        "nama": "PERDAGANGAN"
+    },
+    {
+        "id": 85,
+        "nama": "Pialang"
+    },
+    {
+        "id": 86,
+        "nama": "Anggota DPRD Kabupaten / Kota"
+    },
+    {
+        "id": 87,
+        "nama": "AKUNTAN"
+    },
+    {
+        "id": 88,
+        "nama": "PEMBANTU RUMAH TANGGA"
+    },
+    {
+        "id": 89,
+        "nama": "APOTEKER"
+    },
+    {
+        "id": 90,
+        "nama": "Dosen"
+    },
+    {
+        "id": 91,
+        "nama": "Akuntan"
+    },
+    {
+        "id": 92,
+        "nama": "Tukang Cukur"
+    },
+    {
+        "id": 93,
+        "nama": "DOSEN"
+    },
+    {
+        "id": 94,
+        "nama": "PENATA RIAS"
+    },
+    {
+        "id": 95,
+        "nama": "Pendeta"
+    },
+    {
+        "id": 96,
+        "nama": "MEKANIK"
+    },
+    {
+        "id": 97,
+        "nama": "PENGACARA"
+    },
+    {
+        "id": 98,
+        "nama": "Tukang Sol Sepatu"
+    },
+    {
+        "id": 99,
+        "nama": "Dokter"
+    },
+    {
+        "id": 100,
+        "nama": "TRANSPORTASI"
+    },
+    {
+        "id": 101,
+        "nama": "PELAUT"
+    },
+    {
+        "id": 102,
+        "nama": "PENDETA"
+    },
+    {
+        "id": 103,
+        "nama": "TUKANG SOL SEPATU"
+    },
+    {
+        "id": 104,
+        "nama": "NELAYAN/PERIKANAN"
+    },
+    {
+        "id": 105,
+        "nama": "ANGGOTA DPRD KAB."
+    },
+    {
+        "id": 106,
+        "nama": "USTADZ/MUBALIGH"
+    },
+    {
+        "id": 107,
+        "nama": "DOKTER"
+    },
+    {
+        "id": 108,
+        "nama": "KONSTRUKSI"
+    },
+    {
+        "id": 109,
+        "nama": "PETERNAK"
+    },
+    {
+        "id": 110,
+        "nama": "TUKANG JAHIT"
+    },
+    {
+        "id": 111,
+        "nama": "KARYAWAN BUMD"
+    },
+    {
+        "id": 112,
+        "nama": "Notaris"
+    },
+    {
+        "id": 113,
+        "nama": "TUKANG BATU"
+    },
+    {
+        "id": 114,
+        "nama": "TUKANG GIGI"
+    },
+    {
+        "id": 115,
+        "nama": "ARSITEK"
+    },
+    {
+        "id": 116,
+        "nama": "IMAM MASJID"
+    },
+    {
+        "id": 117,
+        "nama": "INDUSTRI"
+    },
+    {
+        "id": 118,
+        "nama": "Konsultan"
+    },
+    {
+        "id": 119,
+        "nama": "PENATA RAMBUT"
+    },
+    {
+        "id": 120,
+        "nama": "SENIMAN"
+    },
+    {
+        "id": 121,
+        "nama": "Anggota DPR-RI"
+    },
+    {
+        "id": 122,
+        "nama": "Arsitek"
+    },
+    {
+        "id": 123,
+        "nama": "Pengacara"
+    },
+    {
+        "id": 124,
+        "nama": "TUKANG CUKUR"
+    },
+    {
+        "id": 125,
+        "nama": "Penyiar Radio"
+    },
+    {
+        "id": 126,
+        "nama": "TUKANG LISTRIK"
+    },
+    {
+        "id": 127,
+        "nama": "WARTAWAN"
+    },
+    {
+        "id": 128,
+        "nama": "BURUH NELAYAN/PERIKANAN"
+    },
+    {
+        "id": 129,
+        "nama": "SWASTA"
+    },
+    {
+        "id": 130,
+        "nama": "Anggota DPRD Propinsi"
+    },
+    {
+        "id": 131,
+        "nama": "NELAYAN"
+    },
+    {
+        "id": 132,
+        "nama": "Biarawati"
+    },
+    {
+        "id": 133,
+        "nama": "Penata Busana"
+    },
+    {
+        "id": 134,
+        "nama": "Pilot"
+    },
+    {
+        "id": 135,
+        "nama": "Promotor Acara"
+    },
+    {
+        "id": 136,
+        "nama": "Wakil Bupati"
+    },
+    {
+        "id": 137,
+        "nama": "Anggota BPK"
+    },
+    {
+        "id": 138,
+        "nama": "NOTARIS"
+    },
+    {
+        "id": 139,
+        "nama": "Anggota DPD"
+    },
+    {
+        "id": 140,
+        "nama": "PENELITI"
+    },
+    {
+        "id": 141,
+        "nama": "BURUH PETERNAKAN"
+    },
+    {
+        "id": 142,
+        "nama": "Anggota Mahkamah Konstitusi"
+    },
+    {
+        "id": 143,
+        "nama": "PARANORMAL"
+    },
+    {
+        "id": 144,
+        "nama": "PSIKIATER/PSIKOLOG"
+    },
+    {
+        "id": 145,
+        "nama": "PIALANG"
+    },
+    {
+        "id": 146,
+        "nama": "Psikiater / Psikolog"
+    },
+    {
+        "id": 147,
+        "nama": "KONSULTAN"
+    },
+    {
+        "id": 148,
+        "nama": "PENTERJEMAH"
+    },
+    {
+        "id": 149,
+        "nama": "Bupati"
+    },
+    {
+        "id": 150,
+        "nama": "Penyiar Televisi"
+    },
+    {
+        "id": 151,
+        "nama": "IBU RUMAH TANGGA"
+    },
+    {
+        "id": 152,
+        "nama": "-"
+    },
+    {
+        "id": 153,
+        "nama": "IRT"
+    },
+    {
+        "id": 154,
+        "nama": "JURU MASAK"
+    },
+    {
+        "id": 155,
+        "nama": "BELUM/TIDAK BEKERJA"
+    },
+    {
+        "id": 156,
+        "nama": "TENTARA NASIONAL INDONESIA"
+    },
+    {
+        "id": 157,
+        "nama": "PEGAWAI NEGERI SIPIL"
+    },
+    {
+        "id": 158,
+        "nama": "KEPOLISIAN RI"
+    }
+]

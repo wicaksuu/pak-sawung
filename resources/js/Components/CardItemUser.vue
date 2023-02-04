@@ -24,7 +24,27 @@ const tambahJoki = ref(false);
 const dump = useForm({
     user: {
         type: Object,
-        default: () => ({}),
+        default: () => ({
+            alamat:'',
+            desa:{id:0,nama:""},
+            desa_id:0,
+            email:"",
+            kaos:{id:0,"nama":""},
+            kaos_id:0,
+            kecamatan:{id:0,"nama":""},
+            kecamatan_id:0,
+            kelas:{id:0,"nama":""},
+            kelas_id:0,
+            kota:{id:0,"nama":""},
+            kota_id:0,
+            nama:"",
+            nik:"",
+            provinsi:{id:0,"nama":""},
+            provinsi_id:0,
+            tanggal_lahir:"",
+            tempat_lahir:"",
+            tlp:"",      
+        }),
     },
     provinsi: {
         type: Object,
@@ -145,8 +165,46 @@ const form = useForm({
 });
 
 const editItem = (item) => {
-    form.kaos_id = item.kaos.id;
-    form.kaos_nama = item.kaos.nama;
+    let kaos_id =0;
+    let kaos_nama ="";
+    let provinsi_id =0;
+    let provinsi_nama ="";
+    let kota_id =0;
+    let kota_nama ="";
+    let kecamatan_id =0;
+    let kecamatan_nama ="";
+    let desa_id =0;
+    let desa_nama ="";
+    let kelas_id =0;
+    let kelas_nama ="";
+    
+    if (item.kelas) {
+        kelas_id = item.kelas.id;           
+        kelas_nama = item.kelas.nama; 
+    }
+    if (item.desa) {
+        desa_id = item.desa.id;           
+        desa_nama = item.desa.nama; 
+    }
+    if (item.kecamatan) {
+        kecamatan_id = item.kecamatan.id;           
+        kecamatan_nama = item.kecamatan.nama; 
+    }
+    if (item.kaos) {
+        kaos_id = item.kaos.id;        
+        kaos_nama = item.kaos.nama;        
+    }
+    if (item.provinsi) {
+        provinsi_id = item.provinsi.id;           
+        provinsi_nama = item.provinsi.nama; 
+    }
+    if (item.kota) {
+        kota_id = item.kota.id;           
+        kota_nama = item.kota.nama; 
+    }
+    
+    form.kaos_id = kaos_id;
+    form.kaos_nama = kaos_nama;
     form.email = item.email;
     form.userId = item.id;
     form.id = item.id;
@@ -154,16 +212,16 @@ const editItem = (item) => {
     form.tempat_lahir = item.tempat_lahir;
     form.tlp = item.tlp;
     form.alamat = item.alamat;
-    form.provinsi_id = item.provinsi.id;
-    form.provinsi_nama = item.provinsi.nama;
-    form.kecamatan_id = item.kecamatan.id;
-    form.kecamatan_nama = item.kecamatan.nama;
-    form.kota_id = item.kota.id;
-    form.kota_nama = item.kota.nama;
-    form.desa_id = item.desa.id;
-    form.desa_nama = item.desa.nama;
-    form.kelas_id = item.kelas.id;
-    form.kelas_nama = item.kelas.nama;
+    form.provinsi_id = provinsi_id;
+    form.provinsi_nama = provinsi_nama;
+    form.kecamatan_id = kecamatan_id;
+    form.kecamatan_nama = kecamatan_nama;
+    form.kota_id = kota_id;
+    form.kota_nama = kota_nama;
+    form.desa_id = desa_id;
+    form.desa_nama = desa_nama;
+    form.kelas_id = kelas_id;
+    form.kelas_nama = kelas_nama;
     form.nik = item.nik;
     form.tanggal_lahir = item.tanggal_lahir;
     cariProvinsi();
@@ -209,8 +267,11 @@ const updateDataJoki = async () => {
     }
 };
 function truncateString(string, limit) {
+    if (string != null) {
+        
     if (string.length > limit) {
         return string.substring(0, limit) + "...";
+    }
     }
     return string;
 }
@@ -469,7 +530,7 @@ updateDataJoki();
                                 <tr>
                                     <td>Alamat</td>
                                     <td>:</td>
-                                    <td class="text-zinc-500">
+                                    <td class="text-zinc-500" v-if="dump.user.desa">
                                         {{
                                             truncateString(
                                                 dump.user.alamat +
@@ -500,7 +561,7 @@ updateDataJoki();
                             <div class="flex items-center justify-between mt-2">
                                 <span
                                     class="px-2 py-1 blue-white text-xs font-semibold rounded-full"
-                                >
+                               v-if="dump.user.kaos" >
                                     @{{
                                         truncateString(dump.user.kaos.nama, 10)
                                     }}

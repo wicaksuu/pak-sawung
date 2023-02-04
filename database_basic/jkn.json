@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "nama": "TIDAK MEMILIKI"
+    },
+    {
+        "id": 2,
+        "nama": "MANDIRI"
+    },
+    {
+        "id": 3,
+        "nama": "NON BPJS"
+    },
+    {
+        "id": 4,
+        "nama": "PPU"
+    },
+    {
+        "id": 5,
+        "nama": "PBIN"
+    },
+    {
+        "id": 6,
+        "nama": "BPJS PBI"
+    },
+    {
+        "id": 7,
+        "nama": "BPJS NON-PBI"
+    },
+    {
+        "id": 8,
+        "nama": "PBID"
+    },
+    {
+        "id": 9,
+        "nama": "MEMILIKI JKN"
+    },
+    {
+        "id": 10,
+        "nama": "BPJS"
+    },
+    {
+        "id": 11,
+        "nama": "JKN"
+    },
+    {
+        "id": 12,
+        "nama": "TDK MEMILIKI"
+    }
+]

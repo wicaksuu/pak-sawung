@@ -33,18 +33,18 @@ class PesertaController extends Controller
         $validation = $request->validate([
             'userId' => 'required|numeric|exists:pesertas,id',
             'email' => 'nullable|string|max:255',
-            'alamat' => 'required|string|max:255',
-            'provinsi_id' => 'required|not_in:""|not_in:0|numeric|exists:provinsis,id',
-            'kota_id' => 'required|not_in:""|not_in:0|numeric|exists:kotas,id',
-            'kecamatan_id' => 'required|not_in:""|not_in:0|numeric|exists:kecamatans,id',
-            'desa_id' => 'required|not_in:""|not_in:0|numeric|exists:desas,id',
+            'alamat' => 'nullable|string|max:255',
+            'provinsi_id' => 'nullable|not_in:""|not_in:0|numeric|exists:provinsis,id',
+            'kota_id' => 'nullable|not_in:""|not_in:0|numeric|exists:kotas,id',
+            'kecamatan_id' => 'nullable|not_in:""|not_in:0|numeric|exists:kecamatans,id',
+            'desa_id' => 'nullable|not_in:""|not_in:0|numeric|exists:desas,id',
             'nik' => 'nullable|numeric|digits:16',
 
-            'tempat_lahir' => 'required|string|max:255',
-            'tanggal_lahir' => 'required|string|max:255',
-            'kelas_id' => 'required|not_in:""|not_in:0|numeric|exists:kelas,id',
-            'kaos_id' => 'required|not_in:""|not_in:0|numeric|exists:kaos,id',
-            'tlp' => 'required|numeric|digits_between:10,12',
+            'tempat_lahir' => 'nullable|string|max:255',
+            'tanggal_lahir' => 'nullable|string|max:255',
+            'kelas_id' => 'nullable|not_in:""|not_in:0|numeric|exists:kelas,id',
+            'kaos_id' => 'nullable|not_in:""|not_in:0|numeric|exists:kaos,id',
+            'tlp' => 'nullable|numeric|digits_between:10,12',
         ]);
         $user_id    = Cookie::get('id');
         if ($user_id != $validation['userId']) {
@@ -164,7 +164,7 @@ class PesertaController extends Controller
 
     public function getUser(Request $request)
     {
-        $data = Peserta::where('nama', 'LIKE','%'.$request->keyword.'%')->get();
+        $data = Peserta::where('nama', 'LIKE','%'.$request->keyword.'%')->limit(5)->get();
         return response()->json($data); 
     }
 

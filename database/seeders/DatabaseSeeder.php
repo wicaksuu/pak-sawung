@@ -8,6 +8,9 @@ use App\Models\Provinsi;
 use App\Models\Kota;
 use App\Models\Kecamatan;
 use App\Models\Desa;
+use App\Models\Kaos;
+use App\Models\Kelas;
+use App\Models\Peserta;
 
 class DatabaseSeeder extends Seeder
 {
@@ -24,6 +27,37 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+
+        $fh = fopen("database/seeders/kelas.csv", "r");
+        
+        while (!feof($fh)) {
+            $line = fgets($fh);
+            $kelass = explode(",", $line);
+            Peserta::create(["nama"=>$kelass[0],"kelas_id"=>$kelass[1]]);
+        }
+        
+        fclose($fh);
+
+        Kaos::create(["nama"=>"Ukuran XS"]);
+        Kaos::create(["nama"=>"Ukuran S"]);
+        Kaos::create(["nama"=>"Ukuran M"]);
+        Kaos::create(["nama"=>"Ukuran L"]);
+        Kaos::create(["nama"=>"Ukuran XL"]);
+        Kaos::create(["nama"=>"Ukuran 2XL"]);
+        Kaos::create(["nama"=>"Ukuran 3XL"]);
+        Kaos::create(["nama"=>"Ukuran 4XL"]);
+        Kaos::create(["nama"=>"Ukuran 55XL"]);
+
+        Kelas::create(["nama"=>"Kelas A"]);
+        Kelas::create(["nama"=>"Kelas B"]);
+        Kelas::create(["nama"=>"Kelas C"]);
+        Kelas::create(["nama"=>"Kelas D"]);
+        Kelas::create(["nama"=>"Kelas E"]);
+        Kelas::create(["nama"=>"Kelas F"]);
+        Kelas::create(["nama"=>"Kelas G"]);
+        Kelas::create(["nama"=>"Kelas H"]);
+
 
         // KIRIM WILAYAH
         if (file_exists('database_basic/provinsi.json')) {
