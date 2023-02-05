@@ -34,16 +34,16 @@ class PesertaController extends Controller
             'userId' => 'required|numeric|exists:pesertas,id',
             'email' => 'nullable|string|max:255',
             'alamat' => 'nullable|string|max:255',
-            'provinsi_id' => 'nullable|not_in:""|not_in:0|numeric|exists:provinsis,id',
-            'kota_id' => 'nullable|not_in:""|not_in:0|numeric|exists:kotas,id',
-            'kecamatan_id' => 'nullable|not_in:""|not_in:0|numeric|exists:kecamatans,id',
-            'desa_id' => 'nullable|not_in:""|not_in:0|numeric|exists:desas,id',
+            'provinsi_id' => 'nullable|numeric',
+            'kota_id' => 'nullable|numeric',
+            'kecamatan_id' => 'nullable|numeric',
+            'desa_id' => 'nullable|numeric',
             'nik' => 'nullable|numeric|digits:16',
 
             'tempat_lahir' => 'nullable|string|max:255',
             'tanggal_lahir' => 'nullable|string|max:255',
-            'kelas_id' => 'nullable|not_in:""|not_in:0|numeric|exists:kelas,id',
-            'kaos_id' => 'nullable|not_in:""|not_in:0|numeric|exists:kaos,id',
+            'kelas_id' => 'nullable|numeric',
+            'kaos_id' => 'nullable|numeric',
             'tlp' => 'nullable|numeric|digits_between:10,12',
         ]);
         $user_id    = Cookie::get('id');
@@ -146,24 +146,26 @@ class PesertaController extends Controller
         ])->get();  
     $peserta=$pesertas[0];
     $kelas      = Peserta::where('kelas_id',$peserta->kelas_id)->where('id', '!=', $peserta->id)->with([
-        'provinsi', 
         'kota', 
-        'kecamatan', 
-        'desa', 
         'kelas', 
         'kaos'
         ])->get();  
 
     foreach ($kelas as $item) {
-        $ltlp = strlen($item->tlp);
-        $length = strlen($item->nik);
-        if ($length>0) {
-         $item->nik = substr_replace($item->nik, str_repeat('*', 10), $length - 10, 10);
-      } 
+        $item->makeHidden([
+            'tlp',
+            'alamat',
+            'created_at',
+            'updated_at',
+            'nik',
+            'tempat_lahir',
+            'tanggal_lahir',
+            'email',
+            'desa_id',
+            'kecamatan_id',
+            'provinsi_id',
 
-        if ($ltlp>0) {
-        $item->tlp = str_replace(" ", "", substr($item->tlp, 1));
-        }
+        ]);
      }
 
     return response()->json([
@@ -237,18 +239,18 @@ class PesertaController extends Controller
         $validation = $request->validate([
             'userId' => 'required|numeric|exists:pesertas,id',
             'email' => 'nullable|string|max:255',
-            'alamat' => 'required|string|max:255',
-            'provinsi' => 'required|not_in:""|not_in:0|numeric|exists:provinsis,id',
-            'kotas' => 'required|not_in:""|not_in:0|numeric|exists:kotas,id',
-            'kecs' => 'required|not_in:""|not_in:0|numeric|exists:kecamatans,id',
-            'dess' => 'required|not_in:""|not_in:0|numeric|exists:desas,id',
+            'alamat' => 'nullable|string|max:255',
+            'provinsi' => 'nullable|numeric',
+            'kotas' => 'nullable|numeric',
+            'kecs' => 'nullable|numeric',
+            'dess' => 'nullable|numeric',
             'nik' => 'nullable|numeric|digits:16',
 
-            'tempatLahir' => 'required|string|max:255',
-            'tanggalLahir' => 'required|string|max:255',
-            'kelas' => 'required|not_in:""|not_in:0|numeric|exists:kelas,id',
-            'kaos' => 'required|not_in:""|not_in:0|numeric|exists:kaos,id',
-            'tlp' => 'required|numeric|digits_between:10,12',
+            'tempatLahir' => 'nullable|string|max:255',
+            'tanggalLahir' => 'nullable|string|max:255',
+            'kelas' => 'nullable|numeric|exists:kelas,id',
+            'kaos' => 'nullable|numeric|exists:kaos,id',
+            'tlp' => 'nullable|numeric|digits_between:10,12',
         ]);
         $userId    = $validation['userId'];
         $email     = $validation['email'];

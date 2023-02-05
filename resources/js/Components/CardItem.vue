@@ -268,7 +268,7 @@ setInterval(async () => {
 </script>
 
 <template>
-    <Modal :show="tambahJoki" @close="closeModal">
+    <!-- <Modal :show="tambahJoki" @close="closeModal">
         <div class="p-6">
             <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">
                 Edit Data {{ form.nama }}
@@ -457,7 +457,7 @@ setInterval(async () => {
                 </select>
             </div>
         </div>
-    </Modal>
+    </Modal> -->
     <div v-if="dump.users.length > 0" v-for="joki in dump.users">
         <div class="rounded-xl p-1 shadow-lg shadow-sky-200 bg-blue-500">
             <div class="flex justify-between p-1">
@@ -472,18 +472,18 @@ setInterval(async () => {
                             <p class="pl-2 text-2xl font-bold text-zinc-700">
                                 {{ truncateString(joki.nama, 18) }}
                             </p>
-                            <div class="flex text-center items-centered">
+                            <!-- <div class="flex text-center items-centered">
                                 <button
                                     class="text-indigo-600 hover:text-indigo-900 p-1"
                                     @click="editItem(joki)"
                                 >
                                     <Edit />
                                 </button>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="pl-2 mt-4">
                             <table class="table-auto">
-                                <tr>
+                                <!-- <tr>
                                     <td>No.Hp</td>
                                     <td>:</td>
                                     <td class="text-zinc-500">
@@ -491,33 +491,22 @@ setInterval(async () => {
                                             0{{ joki.tlp }}
                                         </a>
                                     </td>
-                                </tr>
+                                </tr> -->
 
                                 <tr>
                                     <td>Alamat</td>
                                     <td>:</td>
                                     <td class="text-zinc-500" v-if="joki.desa">
                                         {{
-                                            truncateString(
-                                                joki.alamat +
-                                                    ", " +
-                                                    joki.desa.nama +
-                                                    " " +
-                                                    joki.kecamatan.nama +
-                                                    " " +
-                                                    joki.kota.nama +
-                                                    " " +
-                                                    joki.provinsi.nama,
-                                                27
-                                            )
+                                            truncateString(joki.kota.nama,27)
                                         }}
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Email</td>
+                                    <td>Kaos</td>
                                     <td>:</td>
-                                    <td class="text-zinc-500">
-                                        <a :href="`mailto:${ joki.email }`" target="_blank" class="underline text-blue-600 hover:font-bold">{{ joki.email }}</a>                                        
+                                    <td class="text-zinc-500"  v-if="joki.kaos">
+                                   {{ truncateString(joki.kaos.nama, 10) }}
                                     </td>
                                 </tr>
                             </table>
@@ -525,7 +514,7 @@ setInterval(async () => {
 
                         <div class="mt-3">
                             <div class="flex items-center justify-between mt-2">
-                                <span
+                                <!-- <span
                                     class="px-2 py-1 blue-white text-xs font-semibold rounded-full"
                                 v-if="joki.kaos" >
                                     @{{ truncateString(joki.kaos.nama, 10) }}
@@ -565,7 +554,7 @@ setInterval(async () => {
                                             }}</span
                                         >
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>

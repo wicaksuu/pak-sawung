@@ -295,7 +295,7 @@ updateDataJoki();
                 <InputLabel for="kelas_id" value="Kelas" />
                 <select
                     id="kelas_id"
-                    required
+                    
                     v-model="form.kelas_id"
                     class="mt-1 block w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm"
                 >
@@ -316,7 +316,7 @@ updateDataJoki();
                     type="email"
                     class="mt-1 block w-full"
                     v-model="form.email"
-                    required
+                    
                     autocomplete="email"
                 />
                 <InputError :message="form.errors.email" class="mt-2" />
@@ -328,7 +328,7 @@ updateDataJoki();
                     type="text"
                     class="mt-1 block w-full"
                     v-model="form.nik"
-                    required
+                    
                     autocomplete="nik"
                 />
                 <InputError :message="form.errors.nik" class="mt-2" />
@@ -340,7 +340,7 @@ updateDataJoki();
                     type="text"
                     class="mt-1 block w-full"
                     v-model="form.nama"
-                    required
+                    
                     autocomplete="nama"
                 />
                 <InputError :message="form.errors.nama" class="mt-2" />
@@ -352,7 +352,7 @@ updateDataJoki();
                     type="text"
                     class="mt-1 block w-full"
                     v-model="form.tempat_lahir"
-                    required
+                    
                     autocomplete="tempat_lahir"
                 />
                 <InputError :message="form.errors.tempat_lahir" class="mt-2" />
@@ -363,7 +363,7 @@ updateDataJoki();
                 id="id"
                 type="hidden"
                 v-model="form.id"
-                required
+                
                 autocomplete="id"
             />
             <div class="mt-4">
@@ -373,7 +373,7 @@ updateDataJoki();
                     type="text"
                     class="mt-1 block w-full"
                     v-model="form.tlp"
-                    required
+                    
                     autocomplete="tlp"
                 />
                 <InputError :message="form.errors.tlp" class="mt-2" />
@@ -386,7 +386,7 @@ updateDataJoki();
                     type="text"
                     class="mt-1 block w-full"
                     v-model="form.alamat"
-                    required
+                    
                     autocomplete="alamat"
                 />
                 <InputError :message="form.errors.alamat" class="mt-2" />
@@ -395,7 +395,7 @@ updateDataJoki();
                 <InputLabel for="provinsi_id" value="Provinsi" />
                 <select
                     id="provinsi_id"
-                    required
+                    
                     v-model="form.provinsi_id"
                     @change="cariKota"
                     class="mt-1 block w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm"
@@ -415,7 +415,7 @@ updateDataJoki();
                 <InputLabel for="kota_id" value="Kota" />
                 <select
                     id="kota_id"
-                    required
+                    
                     @change="cariKec"
                     v-model="form.kota_id"
                     class="mt-1 block w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm"
@@ -434,7 +434,7 @@ updateDataJoki();
                 <InputLabel for="kecamatan_id" value="Kecamatan" />
                 <select
                     id="kecamatan_id"
-                    required
+                    
                     @change="cariDes"
                     v-model="form.kecamatan_id"
                     class="mt-1 block w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm"
@@ -453,7 +453,7 @@ updateDataJoki();
                 <InputLabel for="desa_id" value="Desa" />
                 <select
                     id="desa_id"
-                    required
+                    
                     v-model="form.desa_id"
                     class="mt-1 block w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm"
                 >
@@ -480,7 +480,7 @@ updateDataJoki();
                         <p class="pb-4 text-sm italic opacity-60">3XL , 57 , 77 , 16 , 61</p>
                 <select
                     id="kaos_id"
-                    required
+                    
                     v-model="form.kaos_id"
                     class="mt-1 block w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm"
                 >

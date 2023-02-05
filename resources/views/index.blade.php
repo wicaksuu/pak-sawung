@@ -269,30 +269,25 @@
               <p class="h2 subtitle">
                 Merupakan suatu kehormatan bagi kami
                 <br>
-                apabila rekan-rekan berkenan untuk mengisi biodata ringkas ini.
+                apabila rekan-rekan berkenan hadir.
                 <br>
                 <br>
-                Mohon untuk memasukkan data berdasarkan kelas terakhir/kelas tiga pada saat kelulusan
+                Jika bisa hadir kami tunggu konfirmasinya dangan cara mengisi form kehadiran,
 
                 <br>
                 <br>
-                dengan mengisi biodata nama sesuai KTP atau ijazah, yang secara otomatis tervalidasi dengan database nama Alumni.
+                Mohon mengisi data nama sesuai KTP atau ijasah yang secara otomatis tervalidasi dengan data base nama Alumni
 
                 <br>
                 <br>
-                Untuk pengisian ukuran kaos dilakukan guna mendukung pelaksanaan reuni nantinya.
 
                 <br>
                 <br>
-                Apabila rekan-rekan tidak bisa hadir, kaos akan tetap dikirimkan.
-
-                <br>
-                <br>
-                Apabila ada kesulitan atau permasalahan input data, mohon rekan-rekan mealakukan pemberitahuan
+                Apabila ada kesulitan atau permasalahan tidak bisa diinput,
                 
                 <br>
                 <br>
-                kepada Sdr. Agung Djoko Pratomo (Tommy) melalui link Whatsapp yang ada di bawah, dengan menyebut Nama dan Kelas terakhir saat kelulusan.
+                rekan-rekan melakukan pemberitahuan dengan menyebutkan Nama dan kelas terakhir saat kelulusan.
 
                 <br>
                 <br>
